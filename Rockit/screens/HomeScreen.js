@@ -44,13 +44,15 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.card}>
-          <View style={{ flexDirection: "row", width: 300 }}>
-            <View style={{ flex: 1 }}>
-              <Text style={styles.description_title}>Whitney's scooter</Text>
-              <Text style={styles.description_text}>Location</Text>
+          <TouchableOpacity style={{ marginStart: 40 }} onPress={() => {}}>
+            <View style={{ flexDirection: "row", width: 300 }}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.description_title}>Whitney's scooter</Text>
+                <Text style={styles.description_text}>Location</Text>
+              </View>
+              <Image source={require("../assets/maps.png")} />
             </View>
-            <Image source={require("../assets/maps.png")} />
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={{ flexDirection: "row", margin: 10 }}>
           <View style={styles.cell}>
