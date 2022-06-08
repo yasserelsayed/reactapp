@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import HomeScreen from "./HomeScreen";
 
-export default function SplashScreen() {
+export default function SplashScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/logo.png")} />
@@ -20,7 +19,7 @@ export default function SplashScreen() {
       <TouchableOpacity
         style={styles.button__image}
         onPress={() => {
-          setCities([...cities.filter((i) => i.name != item.name)]);
+          navigation.navigate("Home");
         }}
       >
         <Image source={require("../assets/get_started.png")} />

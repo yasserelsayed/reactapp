@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -44,7 +44,12 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </ImageBackground>
         <View style={styles.card}>
-          <TouchableOpacity style={{ marginStart: 40 }} onPress={() => {}}>
+          <TouchableOpacity
+            style={{ marginStart: 40 }}
+            onPress={() => {
+              navigation.navigate("Map");
+            }}
+          >
             <View style={{ flexDirection: "row", width: 300 }}>
               <View style={{ flex: 1 }}>
                 <Text style={styles.description_title}>Whitney's scooter</Text>
